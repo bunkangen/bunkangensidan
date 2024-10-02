@@ -1,16 +1,30 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // The file path could be relative (if hosted together with the webpage) or an absolute URL.
+  // Fetch the flow.json file
   fetch('flow.json')
-    .then(response => response.json()) // Parse the response as JSON
-    .then(labels1 => {
-      // Select the output div and display the content of the JSON file
-      const outputDiv = document.getElementById('labels1-output');
-      outputDiv.innerHTML = `
-        <p>labels1: ${labels1.label1}</p>
-        <p>labels2: ${labels2.label2}</p>
-      `;
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to load flow.json');
+      }
+      return response.json(); // Parse JSON response
+    })
+    .then(jsonData => {
+      // Display Labels
+      document.getElementById('labels').textContent = jsonData.labels3.join(", ");
+      
+      // Display Series
+      document.getElementById('series').textContent = jsonData.series3.join(", ");
+      
+      // Display Data (timestamps and temperatures)
+      const dataList = document.getElementById('data');
+      jsonData.data3.forEach(entry => {
+        const listItem = document.createElement('li');
+        const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
+        listItem.textContent = `Date: ${date}, Temperature: ${entry.y}°C`;
+        dataList.appendChild(listItem);
+      });
     })
     .catch(error => {
       console.error('Error fetching the file:', error);
+      document.getElementById('output').innerHTML = '<p>Failed to load data.</p>';
     });
 });

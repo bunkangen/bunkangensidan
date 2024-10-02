@@ -3,13 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Read Data from File</title>
+  <title>Display JSON Data from flow.json</title>
 </head>
 <body>
-  <h1>Data from File</h1>
-  <div id="data-output">Loading data...</div>
+  <h1>Temperature Data from flow.json</h1>
+  <div id="output">
+    <h2>Labels</h2>
+    <p id="labels">Loading...</p>
+    
+    <h2>Series</h2>
+    <p id="series">Loading...</p>
+    
+    <h2>Temperature Data</h2>
+    <ul id="data">Loading...</ul>
+  </div>
 
-  <!-- Add the JavaScript to handle file reading -->
+  <!-- JavaScript to handle JSON data from flow.json -->
   <script src="script.js"></script>
 </body>
 </html>
