@@ -1,14 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
   // The file path could be relative (if hosted together with the webpage) or an absolute URL.
-  fetch('data.json')
+  fetch('flow.json')
     .then(response => response.json()) // Parse the response as JSON
-    .then(data => {
+    .then(labels1 => {
       // Select the output div and display the content of the JSON file
-      const outputDiv = document.getElementById('data-output');
+      const outputDiv = document.getElementById('labels1-output');
       outputDiv.innerHTML = `
-        <p>Name: ${data.name}</p>
-        <p>Age: ${data.age}</p>
-        <p>Email: ${data.email}</p>
+        <p>labels1: ${labels1.label1}</p>
+        <p>labels2: ${labels2.label2}</p>
       `;
     })
     .catch(error => {
