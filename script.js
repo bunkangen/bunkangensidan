@@ -119,8 +119,12 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   };
 
-  const ctx = document.getElementById('temperatureChart').getContext('2d');
-        new Chart(ctx, config);
+  try {
+    const ctx = document.getElementById('temperatureChart').getContext('2d');
+    new Chart(ctx, config);
+} catch (error) {
+    console.error('Error rendering the chart:', error);
+}
 
     })
     .catch(error => {
