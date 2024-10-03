@@ -46,6 +46,69 @@ document.addEventListener('DOMContentLoaded', function () {
         listItem.textContent = `Date: ${date}, Temperature 4 Teknikrum: ${entry.y}°C`;
         dataList4.appendChild(listItem);
       });
+
+      const chartData = {
+        datasets: [
+            {
+                label: jsonData.series1[0],
+                data: jsonData.data1.map(d => ({ x: new Date(d.x), y: d.y })),
+                borderColor: 'rgba(255, 99, 132, 1)',
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                fill: false
+            },
+            {
+                label: jsonData.series2[0],
+                data: jsonData.data2.map(d => ({ x: new Date(d.x), y: d.y })),
+                borderColor: 'rgba(54, 162, 235, 1)',
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                fill: false
+            },
+            {
+                label: jsonData.series3[0],
+                data: jsonData.data3.map(d => ({ x: new Date(d.x), y: d.y })),
+                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                fill: false
+            },
+            {
+                label: jsonData.series4[0],
+                data: jsonData.data4.map(d => ({ x: new Date(d.x), y: d.y })),
+                borderColor: 'rgba(153, 102, 255, 1)',
+                backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                fill: false
+            }
+        ]
+    };
+
+    const config = {
+      type: 'line',
+      data: chartData,
+      options: {
+          responsive: true,
+          scales: {
+              x: {
+                  type: 'time',
+                  time: {
+                      unit: 'minute'
+                  },
+                  title: {
+                      display: true,
+                      text: 'Time'
+                  }
+              },
+              y: {
+                  title: {
+                      display: true,
+                      text: 'Temperature (°C)'
+                  }
+              }
+          }
+      }
+  };
+
+  const ctx = document.getElementById('temperatureChart').getContext('2d');
+        new Chart(ctx, config);
+
     })
     .catch(error => {
       console.error('Error fetching the file:', error);
