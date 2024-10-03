@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
         dataList4.appendChild(listItem);
       });
 
-      /* const chartData = {
+      const chartData = {
         datasets: [
             {
                 label: jsonData.series1[0],
@@ -78,8 +78,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 fill: false
             }
         ]
-    }; */
-    const chartData = {
+    };
+    /* const chartData = {
       datasets: [{
           label: 'Example Data',
           data: [
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
           backgroundColor: 'rgba(255, 99, 132, 0.2)',
           fill: false
       }]
-  };
+  }; */
   
 
     const config = {
