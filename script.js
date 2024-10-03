@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const listItem = document.createElement('li');
         const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
         listItem.textContent = `Date: ${date}, Temperature 1 Köket: ${entry.y}°C`;
-        dataList.appendChild(listItem);
+        dataList1.appendChild(listItem);
       });
 
       const dataList2 = document.getElementById('data2');
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const listItem = document.createElement('li');
         const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
         listItem.textContent = `Date: ${date}, Temperature 2 Köket: ${entry.y}°C`;
-        dataList.appendChild(listItem);
+        dataList2.appendChild(listItem);
       });
 
       const dataList3 = document.getElementById('data3');
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const listItem = document.createElement('li');
         const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
         listItem.textContent = `Date: ${date}, Temperature 3 Köket: ${entry.y}°C`;
-        dataList.appendChild(listItem);
+        dataList3.appendChild(listItem);
       });
 
       const dataList4 = document.getElementById('data4');
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const listItem = document.createElement('li');
         const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
         listItem.textContent = `Date: ${date}, Temperature 4 Köket: ${entry.y}°C`;
-        dataList.appendChild(listItem);
+        dataList4.appendChild(listItem);
       });
     })
     .catch(error => {
