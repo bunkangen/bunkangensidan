@@ -9,17 +9,41 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     .then(jsonData => {
       // Display Labels
-      document.getElementById('labels').textContent = jsonData.labels3.join(", ");
+      //document.getElementById('labels').textContent = jsonData.labels3.join(", ");
       
       // Display Series
-      document.getElementById('series').textContent = jsonData.series3.join(", ");
+      //document.getElementById('series').textContent = jsonData.series3.join(", ");
       
       // Display Data (timestamps and temperatures)
-      const dataList = document.getElementById('data');
+      const dataList1 = document.getElementById('data1');
+      jsonData.data1.forEach(entry => {
+        const listItem = document.createElement('li');
+        const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
+        listItem.textContent = `Date: ${date}, Temperature 1 Köket: ${entry.y}°C`;
+        dataList.appendChild(listItem);
+      });
+
+      const dataList2 = document.getElementById('data2');
+      jsonData.data2.forEach(entry => {
+        const listItem = document.createElement('li');
+        const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
+        listItem.textContent = `Date: ${date}, Temperature 2 Köket: ${entry.y}°C`;
+        dataList.appendChild(listItem);
+      });
+
+      const dataList3 = document.getElementById('data3');
       jsonData.data3.forEach(entry => {
         const listItem = document.createElement('li');
         const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
-        listItem.textContent = `Date: ${date}, Temperature: ${entry.y}°C`;
+        listItem.textContent = `Date: ${date}, Temperature 3 Köket: ${entry.y}°C`;
+        dataList.appendChild(listItem);
+      });
+
+      const dataList4 = document.getElementById('data4');
+      jsonData.data4.forEach(entry => {
+        const listItem = document.createElement('li');
+        const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
+        listItem.textContent = `Date: ${date}, Temperature 4 Köket: ${entry.y}°C`;
         dataList.appendChild(listItem);
       });
     })
