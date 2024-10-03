@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
       jsonData.data1.forEach(entry => {
         const listItem = document.createElement('li');
         const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
-        listItem.textContent = `Date: ${date}, Temperature 1 Köket: ${entry.y}°C`;
+        listItem.textContent = `Date: ${date}, Temperature 1 Master badrum: ${entry.y}°C`;
         dataList1.appendChild(listItem);
       });
 
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
       jsonData.data2.forEach(entry => {
         const listItem = document.createElement('li');
         const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
-        listItem.textContent = `Date: ${date}, Temperature 2 Köket: ${entry.y}°C`;
+        listItem.textContent = `Date: ${date}, Temperature 2 Gästbadrum: ${entry.y}°C`;
         dataList2.appendChild(listItem);
       });
 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
       jsonData.data4.forEach(entry => {
         const listItem = document.createElement('li');
         const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
-        listItem.textContent = `Date: ${date}, Temperature 4 Köket: ${entry.y}°C`;
+        listItem.textContent = `Date: ${date}, Temperature 4 Teknikrum: ${entry.y}°C`;
         dataList4.appendChild(listItem);
       });
     })
