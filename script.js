@@ -50,28 +50,28 @@ document.addEventListener('DOMContentLoaded', function () {
       const chartData = {
         datasets: [
             {
-                label: jsonData.series1[0],
+                label: 'Master Badrum 1.',
                 data: jsonData.data1.map(d => ({ x: new Date(d.x), y: d.y })),
                 borderColor: 'rgba(255, 99, 132, 1)',
                 backgroundColor: 'rgba(255, 99, 132, 0.2)',
                 fill: false
             },
             {
-                label: jsonData.series2[0],
+                label: 'Gästbadrum 2.',
                 data: jsonData.data2.map(d => ({ x: new Date(d.x), y: d.y })),
                 borderColor: 'rgba(54, 162, 235, 1)',
                 backgroundColor: 'rgba(54, 162, 235, 0.2)',
                 fill: false
             },
             {
-                label: jsonData.series3[0],
+                label: 'Köket 3.',
                 data: jsonData.data3.map(d => ({ x: new Date(d.x), y: d.y })),
                 borderColor: 'rgba(75, 192, 192, 1)',
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
                 fill: false
             },
             {
-                label: jsonData.series4[0],
+                label: 'Teknikrum 4.',
                 data: jsonData.data4.map(d => ({ x: new Date(d.x), y: d.y })),
                 borderColor: 'rgba(153, 102, 255, 1)',
                 backgroundColor: 'rgba(153, 102, 255, 0.2)',
