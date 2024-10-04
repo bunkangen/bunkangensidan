@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
       //jsonData.data1.forEach(entry => {
       if (lastEntry1) { // Ensure that the data is not empty
-        const listItem = document.createElement('li');
+        //const listItem = document.createElement('li');
         //const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
         const date = new Date(lastEntry1.x).toLocaleString(); // Convert timestamp to readable date
         //listItem.textContent = `Date: ${date}, ${entry.y}°C`;
-        listItem.textContent = `Date: ${date}, ${lastEntry1.y}°C`;
-        dataList1.appendChild(listItem);
+        dataList1.textContent = `Date: ${date}, ${lastEntry1.y}°C`;
+        //dataList1.appendChild(listItem);
       }
       //});
 
