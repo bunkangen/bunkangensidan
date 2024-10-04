@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const date = new Date(lastEntry1.x).toLocaleString(); // Convert timestamp to readable date
         //listItem.textContent = `Date: ${date}, ${entry.y}°C`;
         //dataList1.removeChild;
-        infoheader1.appendChild = ` ${lastEntry1.y}°C (Updaterat senast: ${date})`;
+        infoheader1.textContent += ` ${lastEntry1.y}°C (Updaterat senast: ${date})`;
         //dataList1.appendChild(listItem);
       }
       //});
