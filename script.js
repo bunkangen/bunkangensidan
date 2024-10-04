@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Display Data (timestamps and temperatures)
       const dataList1 = document.getElementById('loading1');
       const infoheader1 = document.getElementById('info1');
-
+      infoheader1.setAttribute('style', 'white-space: pre;');
       const lastEntry1 = jsonData.data1[jsonData.data1.length - 1];
       
       if (lastEntry1) { // Ensure that the data is not empty
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const dataList2 = document.getElementById('loading2');
       const infoheader2 = document.getElementById('info2');
-
+      infoheader2.setAttribute('style', 'white-space: pre;');
       const lastEntry2 = jsonData.data2[jsonData.data2.length - 1];
       
       if (lastEntry2) { // Ensure that the data is not empty
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const dataList3 = document.getElementById('loading3');
       const infoheader3 = document.getElementById('info3');
-
+      infoheader3.setAttribute('style', 'white-space: pre;');
       const lastEntry3 = jsonData.data3[jsonData.data3.length - 1];
       
       if (lastEntry3) { // Ensure that the data is not empty
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const dataList4 = document.getElementById('loading4');
       const infoheader4 = document.getElementById('info4');
-
+      infoheader4.setAttribute('style', 'white-space: pre;');
       const lastEntry4 = jsonData.data4[jsonData.data4.length - 1];
       
       if (lastEntry4) { // Ensure that the data is not empty
