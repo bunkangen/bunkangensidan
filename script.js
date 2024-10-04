@@ -19,18 +19,28 @@ document.addEventListener('DOMContentLoaded', function () {
       const infoheader1 = document.getElementById('info1');
 
       const lastEntry1 = jsonData.data1[jsonData.data1.length - 1];
-      const listItem = document.createElement('h2');
+      
 
 
       //jsonData.data1.forEach(entry => {
       if (lastEntry1) { // Ensure that the data is not empty
-        
+        // Create a <span> element to style the added text separately
+        const span = document.createElement('span');
+
         //const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
         const date = new Date(lastEntry1.x).toLocaleString(); // Convert timestamp to readable date
         //listItem.textContent = `Date: ${date}, ${entry.y}°C`;
         dataList1.remove();
-        listItem.textContent = `: ${lastEntry1.y}°C (Updaterat senast: ${date})`;
-        infoheader1.appendChild(listItem);
+        
+        // Set the text content with different styling for the new content
+        span.textContent = `: ${lastEntry1.y}°C (Updaterat senast: ${date})`;
+
+        // Apply CSS styles to the span (for example, change font size and style)
+        span.style.fontFamily = 'Arial, sans-serif'; // Change the font family
+        span.style.fontWeight = 'bold';              // Make it bold
+        //span.style.color = 'blue';                   // Change the color
+
+        infoheader1.appendChild(span);
       }
       //});
 
