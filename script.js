@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         // Set the text content with different styling for the new content
         span.textContent = `: ${lastEntry1.y}°C`;
-        spanefter.textContent = ` (Uppdaterat senast: ${date})`;
+        spanefter.textContent = `\r\n(Uppdaterat senast: ${date})`;
 
         // Apply CSS styles to the span (for example, change font size and style)
         span.style.fontFamily = 'Arial, sans-serif'; // Change the font family
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         // Set the text content with different styling for the new content
         span.textContent = `: ${lastEntry2.y}°C`;
-        spanefter.textContent = ` (Uppdaterat senast: ${date})`;
+        spanefter.textContent = `\r\n(Uppdaterat senast: ${date})`;
 
         // Apply CSS styles to the span (for example, change font size and style)
         span.style.fontFamily = 'Arial, sans-serif'; // Change the font family
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         // Set the text content with different styling for the new content
         span.textContent = `: ${lastEntry3.y}°C`;
-        spanefter.textContent = ` (Uppdaterat senast: ${date})`;
+        spanefter.textContent = `\r\n(Uppdaterat senast: ${date})`;
 
         // Apply CSS styles to the span (for example, change font size and style)
         span.style.fontFamily = 'Arial, sans-serif'; // Change the font family
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         // Set the text content with different styling for the new content
         span.textContent = `: ${lastEntry4.y}°C`;
-        spanefter.textContent = ` (Uppdaterat senast: ${date})`;
+        spanefter.textContent = `\r\n(Uppdaterat senast: ${date})`;
 
         // Apply CSS styles to the span (for example, change font size and style)
         span.style.fontFamily = 'Arial, sans-serif'; // Change the font family
