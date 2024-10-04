@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
         //span.style.color = 'blue';                   // Change the color
 
         infoheader1.appendChild(span);
+        infoheader1.appendChild(spanefter);
       }
       //});
 
