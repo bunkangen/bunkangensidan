@@ -20,9 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const lastEntry1 = jsonData.data1[jsonData.data1.length - 1];
       
-
-
-      //jsonData.data1.forEach(entry => {
       if (lastEntry1) { // Ensure that the data is not empty
         // Create a <span> element to style the added text separately
         const span = document.createElement('span');
@@ -30,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         //const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
         const date = new Date(lastEntry1.x).toLocaleString(); // Convert timestamp to readable date
-        //listItem.textContent = `Date: ${date}, ${entry.y}°C`;
+        
         dataList1.remove();
         
         // Set the text content with different styling for the new content
@@ -43,36 +40,101 @@ document.addEventListener('DOMContentLoaded', function () {
 
         spanefter.style.fontFamily = 'Arial, sans-serif'; // Change the font family
         spanefter.style.fontWeight = 'normal';              // Make it bold
-        //span.style.color = 'blue';                   // Change the color
-
+        
         infoheader1.appendChild(span);
         infoheader1.appendChild(spanefter);
       }
-      //});
+      
 
       const dataList2 = document.getElementById('loading2');
-      jsonData.data2.forEach(entry => {
-        const listItem = document.createElement('li');
-        const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
-        listItem.textContent = `Date: ${date}, ${entry.y}°C`;
-        dataList2.appendChild(listItem);
-      });
+      const infoheader2 = document.getElementById('info2');
+
+      const lastEntry2 = jsonData.data2[jsonData.data2.length - 1];
+      
+      if (lastEntry2) { // Ensure that the data is not empty
+        // Create a <span> element to style the added text separately
+        const span = document.createElement('span');
+        const spanefter = document.createElement('spanefter');
+
+        //const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
+        const date = new Date(lastEntry2.x).toLocaleString(); // Convert timestamp to readable date
+        
+        dataList2.remove();
+        
+        // Set the text content with different styling for the new content
+        span.textContent = `: ${lastEntry2.y}°C`;
+        spanefter.textContent = ` (Uppdaterat senast: ${date})`;
+
+        // Apply CSS styles to the span (for example, change font size and style)
+        span.style.fontFamily = 'Arial, sans-serif'; // Change the font family
+        span.style.fontWeight = 'bold';              // Make it bold
+
+        spanefter.style.fontFamily = 'Arial, sans-serif'; // Change the font family
+        spanefter.style.fontWeight = 'normal';              // Make it bold
+        
+        infoheader2.appendChild(span);
+        infoheader2.appendChild(spanefter);
+      }
 
       const dataList3 = document.getElementById('loading3');
-      jsonData.data3.forEach(entry => {
-        const listItem = document.createElement('li');
-        const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
-        listItem.textContent = `Date: ${date}, ${entry.y}°C`;
-        dataList3.appendChild(listItem);
-      });
+      const infoheader3 = document.getElementById('info3');
+
+      const lastEntry3 = jsonData.data3[jsonData.data3.length - 1];
+      
+      if (lastEntry3) { // Ensure that the data is not empty
+        // Create a <span> element to style the added text separately
+        const span = document.createElement('span');
+        const spanefter = document.createElement('spanefter');
+
+        //const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
+        const date = new Date(lastEntry3.x).toLocaleString(); // Convert timestamp to readable date
+        
+        dataList3.remove();
+        
+        // Set the text content with different styling for the new content
+        span.textContent = `: ${lastEntry3.y}°C`;
+        spanefter.textContent = ` (Uppdaterat senast: ${date})`;
+
+        // Apply CSS styles to the span (for example, change font size and style)
+        span.style.fontFamily = 'Arial, sans-serif'; // Change the font family
+        span.style.fontWeight = 'bold';              // Make it bold
+
+        spanefter.style.fontFamily = 'Arial, sans-serif'; // Change the font family
+        spanefter.style.fontWeight = 'normal';              // Make it bold
+        
+        infoheader3.appendChild(span);
+        infoheader3.appendChild(spanefter);
+      }
 
       const dataList4 = document.getElementById('loading4');
-      jsonData.data4.forEach(entry => {
-        const listItem = document.createElement('li');
-        const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
-        listItem.textContent = `Date: ${date}, ${entry.y}°C`;
-        dataList4.appendChild(listItem);
-      });
+      const infoheader4 = document.getElementById('info4');
+
+      const lastEntry4 = jsonData.data4[jsonData.data4.length - 1];
+      
+      if (lastEntry4) { // Ensure that the data is not empty
+        // Create a <span> element to style the added text separately
+        const span = document.createElement('span');
+        const spanefter = document.createElement('spanefter');
+
+        //const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
+        const date = new Date(lastEntry4.x).toLocaleString(); // Convert timestamp to readable date
+        
+        dataList4.remove();
+        
+        // Set the text content with different styling for the new content
+        span.textContent = `: ${lastEntry4.y}°C`;
+        spanefter.textContent = ` (Uppdaterat senast: ${date})`;
+
+        // Apply CSS styles to the span (for example, change font size and style)
+        span.style.fontFamily = 'Arial, sans-serif'; // Change the font family
+        span.style.fontWeight = 'bold';              // Make it bold
+
+        spanefter.style.fontFamily = 'Arial, sans-serif'; // Change the font family
+        spanefter.style.fontWeight = 'normal';              // Make it bold
+        
+        infoheader4.appendChild(span);
+        infoheader4.appendChild(spanefter);
+      }
 
       const chartData = {
         datasets: [
