@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (lastEntry1) { // Ensure that the data is not empty
         // Create a <span> element to style the added text separately
         const span = document.createElement('span');
+        const spanefter = document.createElement('spanefter');
 
         //const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
         const date = new Date(lastEntry1.x).toLocaleString(); // Convert timestamp to readable date
@@ -33,11 +34,15 @@ document.addEventListener('DOMContentLoaded', function () {
         dataList1.remove();
         
         // Set the text content with different styling for the new content
-        span.textContent = `: ${lastEntry1.y}°C (Updaterat senast: ${date})`;
+        span.textContent = `: ${lastEntry1.y}°C`;
+        spanefter.textContent = ` (Uppdaterat senast: ${date})`;
 
         // Apply CSS styles to the span (for example, change font size and style)
         span.style.fontFamily = 'Arial, sans-serif'; // Change the font family
         span.style.fontWeight = 'bold';              // Make it bold
+
+        spanefter.style.fontFamily = 'Arial, sans-serif'; // Change the font family
+        spanefter.style.fontWeight = 'normal';              // Make it bold
         //span.style.color = 'blue';                   // Change the color
 
         infoheader1.appendChild(span);
