@@ -19,18 +19,18 @@ document.addEventListener('DOMContentLoaded', function () {
       const infoheader1 = document.getElementById('info1');
 
       const lastEntry1 = jsonData.data1[jsonData.data1.length - 1];
-
+      const listItem = document.createElement('h2');
 
 
       //jsonData.data1.forEach(entry => {
       if (lastEntry1) { // Ensure that the data is not empty
-        //const listItem = document.createElement('li');
+        
         //const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
         const date = new Date(lastEntry1.x).toLocaleString(); // Convert timestamp to readable date
         //listItem.textContent = `Date: ${date}, ${entry.y}°C`;
-        //dataList1.removeChild;
-        infoheader1.textContent += ` ${lastEntry1.y}°C (Updaterat senast: ${date})`;
-        //dataList1.appendChild(listItem);
+        dataList1.remove();
+        listItem.textContent = `: ${lastEntry1.y}°C (Updaterat senast: ${date})`;
+        infoheader1.appendChild(listItem);
       }
       //});
 
