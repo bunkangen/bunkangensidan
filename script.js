@@ -195,13 +195,13 @@ document.addEventListener('DOMContentLoaded', function () {
                   },
                   title: {
                       display: true,
-                      text: 'Time'
+                      text: 'Datum'
                   }
               },
               y: {
                   title: {
                       display: true,
-                      text: 'Temperature (°C)'
+                      text: 'Temperatur (°C)'
                   }
               }
           }
