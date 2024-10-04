@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function () {
               x: {
                   type: 'time',
                   time: {
-                      unit: 'minute'
+                      unit: 'day'
                   },
                   title: {
                       display: true,
