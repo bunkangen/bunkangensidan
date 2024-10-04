@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
       //document.getElementById('series').textContent = jsonData.series3.join(", ");
       
       // Display Data (timestamps and temperatures)
-      const dataList1 = document.getElementById('data1');
+      const dataList1 = document.getElementById('loading1');
+      const infoheader1 = document.getElementById('info1');
 
       const lastEntry1 = jsonData.data1[jsonData.data1.length - 1];
 
@@ -27,12 +28,13 @@ document.addEventListener('DOMContentLoaded', function () {
         //const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
         const date = new Date(lastEntry1.x).toLocaleString(); // Convert timestamp to readable date
         //listItem.textContent = `Date: ${date}, ${entry.y}°C`;
-        dataList1.textContent = `Date: ${date}, ${lastEntry1.y}°C`;
+        dataList1.remove;
+        infoheader1.appendChild = ` ${lastEntry1.y}°C (Updaterat senast: ${date})`;
         //dataList1.appendChild(listItem);
       }
       //});
 
-      const dataList2 = document.getElementById('data2');
+      const dataList2 = document.getElementById('loading2');
       jsonData.data2.forEach(entry => {
         const listItem = document.createElement('li');
         const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
@@ -40,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
         dataList2.appendChild(listItem);
       });
 
-      const dataList3 = document.getElementById('data3');
+      const dataList3 = document.getElementById('loading3');
       jsonData.data3.forEach(entry => {
         const listItem = document.createElement('li');
         const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
@@ -48,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
         dataList3.appendChild(listItem);
       });
 
-      const dataList4 = document.getElementById('data4');
+      const dataList4 = document.getElementById('loading4');
       jsonData.data4.forEach(entry => {
         const listItem = document.createElement('li');
         const date = new Date(entry.x).toLocaleString(); // Convert timestamp to readable date
